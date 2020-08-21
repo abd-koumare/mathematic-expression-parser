@@ -6,21 +6,6 @@
 #include "parser.h"
 
 
-void measure_time() {
-    auto start = std::chrono::high_resolution_clock::now();
-
-    /*
-     *
-     * put the code here !!!
-     *
-     * */
-    auto stop = std::chrono::high_resolution_clock::now();
-
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    std::cout << "Time taken by function: "
-              << duration.count() << " microseconds" << std::endl;
-}
-
 int main() {
     std::cout.precision(std::numeric_limits<double>::max_digits10);
 
@@ -36,3 +21,19 @@ int main() {
 
 }
 
+
+
+void measure_time() {
+    auto start = std::chrono::high_resolution_clock::now();
+
+    /*
+     *
+     * put the code here !!!
+     *
+     * */
+    auto stop = std::chrono::high_resolution_clock::now();
+
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    std::cout << "Time taken by function: "
+              << duration.count() << " microseconds" << std::endl;
+}
