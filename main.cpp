@@ -24,10 +24,14 @@ void measure_time() {
 int main() {
     std::cout.precision(std::numeric_limits<double>::max_digits10);
 
-    std::string exp("25+25");
+    /*
+     * mistake 8 - 2 = 6 then 6 * 3 = 18
+     * run to see the exact answer
+    */
+
+    std::string exp("8-2*3");
 
     std::cout << evaluate_string(exp) << std::endl;
-
 
 
 }
