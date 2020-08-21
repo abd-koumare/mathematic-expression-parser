@@ -28,7 +28,7 @@
  the repo and then include the file "parser.h" so you will have access to two very useful 
  functions like evaluate_string (std::string) and evaluate_postfix_expression (Expression&)
  that return the result of the evaluation (in radian).
- The result brought back is a result close to what your scientific calculator will return reason.
+ The result brought back is a result close to what your scientific calculator will return.
  I have made it extendable in such way that you just have to add character that will represent an 
  operation and describe the calculation in calculate function so enjoy it.
  
