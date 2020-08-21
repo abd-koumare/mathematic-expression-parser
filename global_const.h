@@ -17,7 +17,7 @@ enum {
     EXPONENTIATION_OPERATOR = '^',
 
 
-//mathematic functions
+//mathematical functions
     SINUS_FUNCTION = 's',
     COSINUS_FUNCTION = 'c',
     TANGENT_FUNCTION = 't',

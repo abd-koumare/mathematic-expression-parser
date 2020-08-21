@@ -9,9 +9,9 @@
 #define EXPRESSION_PARSER_UTILS_H
 
 
-const unsigned int precedence(const char);
+const unsigned int precedence(char);
 
-const char associativity(const char);
+const char associativity(char);
 
 const unsigned int precedence(const char op) {
     switch (op) {
@@ -27,9 +27,10 @@ const unsigned int precedence(const char op) {
         case TANGENT_FUNCTION:
         case COSINUS_FUNCTION:
             return 10;
-
+        default:
+            return 1; //for left parenthesis
     }
-    return 1; //for left parenthesis
+
 }
 
 
@@ -45,9 +46,10 @@ const char associativity(const char op) {
         case TANGENT_FUNCTION:
         case COSINUS_FUNCTION:
             return 'R'; // right associative
-
+        default:
+            return 'L'; //default associativity
     }
-    return 'L'; //default associativity
+
 }
 
 

@@ -15,7 +15,7 @@ class Expression
 
 public:
 
-    Expression(const std::string theExpression)
+    explicit  Expression(const std::string &theExpression)
             :cursor(0), startingIndex(0), endingIndex(theExpression.size() -1)
     {
         if(theExpression.at(0) == '-')
@@ -23,6 +23,7 @@ public:
         else
             expression = theExpression;
     }
+
 
 
 
@@ -50,12 +51,12 @@ public:
 
     Expression& next();
     Expression& back();
-    Expression& operator[](const unsigned short);
-    Expression& at(const unsigned short);
+    Expression& operator[](unsigned short);
+    Expression& at(unsigned short);
 
 
     //setters or modifiers
-    void setExpression(const std::string);
+    void setExpression(std::string);
 
 
 
@@ -110,9 +111,9 @@ bool Expression::isOperator() const
         case TANGENT_FUNCTION:
         case COSINUS_FUNCTION:
             return true;
-
+        default:
+            return false;
     }
-    return false; //instead of double default
 }
 
 //getters

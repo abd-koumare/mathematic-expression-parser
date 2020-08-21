@@ -12,9 +12,6 @@
 
 class Stack {
 public:
-    Stack() {}
-
-    ~Stack() {}
 
     bool isEmpty() const;
 
@@ -24,7 +21,7 @@ public:
 
     bool topHasHigherPrecedenceThan(Operator) const;
 
-    void push(const Operator);
+    void push(Operator);
 
 private:
 
